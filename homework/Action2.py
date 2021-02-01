@@ -1,0 +1,12 @@
+import numpy as np
+score = np.array([[68, 65, 30], [95, 76, 78], [98, 86, 88], [90, 88, 77], [80, 90, 90]])
+grade_sum= np.sum(score, axis=1)
+index = np.argsort(-grade_sum)
+rank = np.argsort(index)
+print("语数外成绩分布：\r\n", score)
+print("语数外各科平均成绩: \r\n", np.mean(score, axis=0))
+print("语数外各科最小成绩: \r\n",np.amin(score, axis=0) )
+print("语数外各科最大成绩: \r\n", np.amax(score, axis=0))
+print("语数外各科成绩方差: \r\n", np.var(score, axis=0))
+print("语数外各科成绩标准差: \r\n", np.std(score, axis=0))
+print("张飞 关羽 刘备 典韦 许褚 \r\n", rank+1)
